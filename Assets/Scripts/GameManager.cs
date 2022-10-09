@@ -9,8 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Cube cube;
     [SerializeField] Sphere sphere;
     [SerializeField] Capsule capsule;
-
-
+    [SerializeField] Text playerNameText;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +18,7 @@ public class GameManager : MonoBehaviour
         sphere = new Sphere(); // reference object for sphere
         capsule = new Capsule(); // reference object for capsule
 
+        playerNameText.text = $"Player name: {MenuControl.instance.playerName}";
     }
 
     // Update is called once per frame
@@ -27,19 +27,23 @@ public class GameManager : MonoBehaviour
         
     }
 
+
     public void CubeButton() // CubeButton OnClick call method
     {
         cubeText.text = cube.DisplayText();
+        
         // cubeText.text = cube.GetShapeColorAndName(cube.shapeColor, cube.shapeName); // cube default class variables value assigment to cube text
     }
     public void SphereButton() // SphereButton OnClick call method
     {
         sphereText.text = sphere.DisplayText();
+        
         // sphereText.text = sphere.GetShapeColorAndName(sphere.shapeColor, sphere.shapeName); // sphere default class variables value assigment to sphere text
     }
     public void CapsuleButton() // CapsuleButton OnClick call method
     {
         capsuleText.text = capsule.DisplayText();
+        
         // capsuleText.text = capsule.GetShapeColorAndName(capsule.shapeColor, capsule.shapeName); // capsule default class variables value assigment to capsule text
     }
 }
