@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Capsule : Shape
+public class Capsule : Shape //Inheritance
 {
+    public string shapeName = "Capsule";
+    public string shapeColor = "Blue";
+
     
-    
+
+    //polymorphism
+    public override string DisplayText()//overide method for shapeColor and shapeName
+    {
+        return $"{shapeColor} {shapeName}";
+    }
 }

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 71f14a2d79f732f4d9893ef1b911f4ff, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4067de1a02072244798361060c5e7325, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.48613256, g: 0.57732064, b: 0.68299407, a: 1}
+  m_IndirectSpecularColor: {r: 0.25424546, g: 0.21805964, b: 0.23406166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Click
 --- !u!222 &175355727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 289910167}
   - component: {fileID: 289910166}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: CapsuleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 289910167}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875045528}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CapsuleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289910167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Click
 --- !u!222 &544029405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -610,7 +622,7 @@ GameObject:
   - component: {fileID: 653557918}
   - component: {fileID: 653557917}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: CubeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 653557918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875045528}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CubeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &653557918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +755,7 @@ GameObject:
   - component: {fileID: 866989846}
   - component: {fileID: 866989845}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: CubeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Shape color and name
 --- !u!222 &866989846
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1132,7 +1156,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Click
 --- !u!222 &1779695392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,7 +1261,7 @@ GameObject:
   - component: {fileID: 1862718840}
   - component: {fileID: 1862718839}
   m_Layer: 5
-  m_Name: Text (Legacy) (2)
+  m_Name: CapsuleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,7 +1320,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Shape color and name
 --- !u!222 &1862718840
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1334,6 +1358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862988033f3e2104988c90c4b69c4a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cubeText: {fileID: 866989845}
+  sphereText: {fileID: 2061180068}
+  capsuleText: {fileID: 1862718839}
 --- !u!4 &1875045529
 Transform:
   m_ObjectHideFlags: 0
@@ -1467,7 +1494,7 @@ GameObject:
   - component: {fileID: 2061180069}
   - component: {fileID: 2061180068}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: SphereText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1526,7 +1553,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Shape color and name
 --- !u!222 &2061180069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1548,7 +1575,7 @@ GameObject:
   - component: {fileID: 2146260158}
   - component: {fileID: 2146260157}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: SphereButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1645,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146260158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1875045528}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SphereButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2146260158
 MonoBehaviour:
   m_ObjectHideFlags: 0
