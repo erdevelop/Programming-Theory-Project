@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : Shape //Inheritance
+public class Sphere : Shape //Inheritance sub class
 {
     public string shapeName = "Sphere";
     public string shapeColor = "Green";

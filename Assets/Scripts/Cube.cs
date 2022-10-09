@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : Shape //Inheritance
+public class Cube : Shape //Inheritance sub class
 {
     public string shapeName = "Cube";
     public string shapeColor = "Red";

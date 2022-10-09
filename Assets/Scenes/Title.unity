@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInputField: {fileID: 1029173387}
-  playername: 
+  playerName: 
 --- !u!4 &643621275
 Transform:
   m_ObjectHideFlags: 0
